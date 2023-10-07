@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C1E8FF"
+    tools:context=".crud_medicos">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="42dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="186dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/logg" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Consulturio Medico Familiar"
+        android:textColor="#219BCC"
+        android:textSize="8dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Dr. Jan Hermoza"
+        android:textColor="#003549"
+        android:textSize="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="100dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Registar Personal De Salud:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/list_regis"
+        android:layout_width="282dp"
+        android:layout_height="449dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="64dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtcorreo"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/platin_text_border"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Correo Electronico"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtcontra"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/platin_text_border"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Contraseña"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtnom"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/platin_text_border"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Nombres"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtapeP"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/platin_text_border"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Apellido Paterno"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtapeM"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/platin_text_border"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Apellido Materno"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtdni"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/platin_text_border"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Doc. Identidad"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtdirec"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/platin_text_border"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Direccion"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/logutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="600dp"
+        android:backgroundTint="@color/azul"
+        android:text="Disconect"
+        android:textSize="10sp"
+        />
+    <Button
+        android:id="@+id/btnRegis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="255dp"
+        android:layout_marginTop="600dp"
+        android:backgroundTint="@color/azul"
+        android:text="Registrar"
+        android:textSize="10sp"
+        />
+
+    <TextView
+        android:id="@+id/emailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="580dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</RelativeLayout>

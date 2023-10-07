@@ -1,0 +1,33 @@
+{
+  "project_info": {
+    "project_number": "235046654910",
+    "project_id": "citasapp-45f95",
+    "storage_bucket": "citasapp-45f95.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235046654910:android:9702f2ac008799869a1fef",
+        "android_client_info": {
+          "package_name": "com.proyecto_citas_medicas"
+        }
+      },
+      "oauth_client": [
+               {
+
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpV9RJLBQRmkLVY2A2exyQNyMieOmrusM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

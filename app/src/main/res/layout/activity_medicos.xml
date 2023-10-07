@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C1E8FF"
+    tools:context=".Medicos_Activity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="117dp"
+        android:layout_height="129dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="166dp"
+        android:layout_marginEnd="138dp"
+        app:srcCompat="@drawable/logg" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="295dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Consultorio Medico Familiar"
+        android:textColor="#219BCC"        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:layout_marginStart="150dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Dr. Jan Hermoza"
+        android:textColor="#003549"         />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="400dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Bienvenido Doctor"
+        android:textColor="#003549"
+        android:textSize="24sp" />
+
+
+</RelativeLayout>
