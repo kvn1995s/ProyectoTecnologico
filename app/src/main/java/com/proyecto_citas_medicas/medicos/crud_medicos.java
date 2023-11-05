@@ -1,20 +1,13 @@
 package com.proyecto_citas_medicas;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.Activity;
-import android.app.DownloadManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -25,7 +18,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.ktx.Firebase;
 import com.proyecto_citas_medicas.databinding.ActivityCrudMedicosBinding;
 
 import java.util.HashMap;
@@ -36,11 +28,11 @@ public class crud_medicos extends AppCompatActivity {
     private ActivityCrudMedicosBinding binding;
     private FirebaseAuth firebaseAuth;
 
-    private static final String URL1 ="http://192.168.0.3/AppCitas/save.php";
+    private static final String URL1 ="http://10.0.2.2/appCitas/save.php/";
 
     RequestQueue requestQueue;
 
-    EditText edtcorreo,edtcontra,edtnoms,edtapeP,edtapeM,edtdni,edtdirect;
+    EditText edtcorreo,edtcontra,edtnoms,edtapeP,edtapeM,edtdni,edtdirect,edtcmp;
 
 
     @Override
@@ -57,8 +49,8 @@ public class crud_medicos extends AppCompatActivity {
         binding.logutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                firebaseAuth.signOut();
-                checkUser();
+
+                finish();
             }
         });
         binding.btnRegis.setOnClickListener(new View.OnClickListener() {
@@ -72,14 +64,15 @@ public class crud_medicos extends AppCompatActivity {
                     String apellidoMaternoM	 = edtapeM.getText().toString().trim();
                     String dniMe = edtdni.getText().toString().trim();
                     String direccionMe = edtdirect.getText().toString().trim();
+                    String cmpMedico = edtcmp.getText().toString().trim();
 
-                    createMedic(correoMed,contraseñaMed,nomMed,apellidoPaternoM,apellidoMaternoM,dniMe,direccionMe);
+                    createMedic(correoMed,contraseñaMed,nomMed,apellidoPaternoM,apellidoMaternoM,dniMe,direccionMe,cmpMedico);
             }
         });
 
     }
 
-    private void createMedic(final String correoMed,final String contraseñaMed,final String nomMed ,final String apellidoPaternoM, final String apellidoMaternoM, final String dniMe, final String direccionMe) {
+    private void createMedic(final String correoMed,final String contraseñaMed,final String nomMed ,final String apellidoPaternoM, final String apellidoMaternoM, final String dniMe, final String direccionMe,final String cmpMedico) {
 
         StringRequest stringRequest =new StringRequest(
                 Request.Method.POST,
@@ -108,6 +101,7 @@ public class crud_medicos extends AppCompatActivity {
                 params.put("apellidoMaternoM",apellidoMaternoM);
                 params.put("dniMe",dniMe);
                 params.put("direccionMe",direccionMe);
+                params.put("cmpMedico",cmpMedico);
 
                 return params;
             }
@@ -124,6 +118,7 @@ public class crud_medicos extends AppCompatActivity {
         edtapeM = findViewById(R.id.edtapeM);
         edtdni = findViewById(R.id.edtdni);
         edtdirect = findViewById(R.id.edtdirec);
+        edtcmp=findViewById(R.id.edtCmp);
     }
 
     private void checkUser() {

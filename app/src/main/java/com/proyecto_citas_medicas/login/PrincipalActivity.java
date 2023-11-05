@@ -1,14 +1,16 @@
-package com.proyecto_citas_medicas;
+package com.proyecto_citas_medicas.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class update_medico extends AppCompatActivity {
+import com.proyecto_citas_medicas.R;
+
+public class PrincipalActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_medico);
+        setContentView(R.layout.activity_principal);
     }
 }

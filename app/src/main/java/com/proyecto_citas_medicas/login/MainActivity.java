@@ -1,13 +1,5 @@
 package com.proyecto_citas_medicas;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +7,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.Auth;
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -29,8 +27,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
-import com.google.firebase.ktx.Firebase;
 import com.proyecto_citas_medicas.databinding.ActivityMainBinding;
+import com.proyecto_citas_medicas.medicos.Medicos_Activity;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
@@ -84,10 +82,10 @@ public class MainActivity extends AppCompatActivity {
         if (firebaseUser != null){
             String emailMed = firebaseUser.getEmail().toString();
                 if (emailMed.equals("kamc123456@gmail.com")){
-                    startActivity(new Intent(this,crud_medicos.class));
+                    startActivity(new Intent(this,administrador_activity.class));
 
                 }else{
-                    startActivity(new Intent(this,Medicos_Activity.class));
+                    startActivity(new Intent(this, Medicos_Activity.class));
                 }
             finish();
         }
@@ -120,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         //Inicio de activity
                        if (email.equals("kamc123456@gmail.com")){
-                           startActivity(new Intent(MainActivity.this,crud_medicos.class));
+                           startActivity(new Intent(MainActivity.this,administrador_activity.class));
                        }else {
                            startActivity(new Intent(MainActivity.this,Medicos_Activity.class));
                            finish();
