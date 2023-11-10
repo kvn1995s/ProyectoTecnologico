@@ -1,4 +1,4 @@
-package com.proyecto_citas_medicas;
+package com.proyecto_citas_medicas.medicos;
 
 public class ListMedicos {
  private int Id;

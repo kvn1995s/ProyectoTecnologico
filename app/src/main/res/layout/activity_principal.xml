@@ -4,6 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E1DCE0"
     tools:context=".login.PrincipalActivity">
+
+
+    <ImageView
+        android:id="@+id/imgFondoDoctores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/intro" />
+
+    <ImageView
+        android:id="@+id/imgFondoAzul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-360dp"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgFondoDoctores"
+        app:srcCompat="@drawable/fondo1" />
+
+    <TextView
+        android:id="@+id/txvConsultorioMedico"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="Consultorio Medico Familiar"
+        android:textAlignment="viewStart"
+        android:textColor="#e1dce0"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgFondoDoctores" />
+
+    <Button
+        android:id="@+id/btnIngresar"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="470dp"
+        android:text="Ingresar"
+        android:textSize="15sp"
+        android:onClick="ingresarLogin"
+        app:backgroundTint="#3980EA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imgFondoDoctores"
+        app:layout_constraintTop_toBottomOf="@+id/txvConsultorioMedico" />
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:text="REGISTRARSE"
+        android:textColor="#3980EA"
+        android:textSize="15sp"
+        android:onClick="registrarseLogin"
+        app:backgroundTint="#e1dce0"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/imgFondoDoctores"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresar"
+        app:strokeColor="#3980EA"
+        app:strokeWidth="2dp" />
+
+    <ImageView
+        android:id="@+id/imgCmpLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cmp_logo" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

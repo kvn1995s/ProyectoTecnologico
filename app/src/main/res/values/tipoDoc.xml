@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="tipoDoc">
+        <item>--Seleccione--</item>
+        <item>DNI</item>
+        <item>RUC</item>
+        <item>CARNET EXTRANJERIA</item>
+        <item>PASAPORTE</item>
+    </string-array>
 </resources>

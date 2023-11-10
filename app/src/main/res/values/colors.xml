@@ -4,4 +4,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#DB4A39</color>
     <color name="azul">#5661fa</color>
+    <color name="gray">#888</color>
+    <color name="button_background">#e1dce0</color>
+    <color name="button_border">#3980EA</color>
+    <color name="button_text">#3980EA</color>
+
 </resources>

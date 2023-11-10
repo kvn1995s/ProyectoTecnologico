@@ -4,6 +4,351 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".update_medico">
+    android:background="#E1DCE0"
+    tools:context=".medicos.update_medico"
+    tools:ignore="ExtraText">
+
+
+    <ImageView
+        android:id="@+id/imgFondoAzul4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.016"
+        app:srcCompat="@drawable/fondo4" />
+
+    <TextView
+        android:id="@+id/txvActualizarDatos"
+        android:layout_width="313dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="Actualizar datos Personal"
+        android:textColor="#3980EA"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cmp_logo" />
+
+    <TextView
+        android:id="@+id/txvContrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Contraseña:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/imgDoctor"
+        app:layout_constraintTop_toBottomOf="@+id/imgDoctor" />
+
+    <EditText
+        android:id="@+id/edtContrasena"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+        app:layout_constraintStart_toStartOf="@+id/txvContrasena"
+        app:layout_constraintTop_toBottomOf="@+id/txvContrasena"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+    <TextView
+        android:id="@+id/txvNombres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Nombres:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/edtContrasena"
+        app:layout_constraintTop_toBottomOf="@+id/edtContrasena" />
+
+    <EditText
+        android:id="@+id/edtNombres"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/edtContrasena"
+        app:layout_constraintStart_toStartOf="@+id/txvNombres"
+        app:layout_constraintTop_toBottomOf="@+id/txvNombres"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txvApellidoPat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Apellido Paterno:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/edtNombres"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombres" />
+
+    <EditText
+        android:id="@+id/edtApellidos"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        app:layout_constraintStart_toStartOf="@+id/txvApellidoPat"
+        app:layout_constraintTop_toBottomOf="@+id/txvApellidoPat"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txvApellidoMat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="61dp"
+        android:text="Apellido Materno"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/edtNombres"
+        app:layout_constraintTop_toTopOf="@+id/txvApellidoPat"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/edtApellidoMat"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/edtNombres"
+        app:layout_constraintStart_toStartOf="@+id/txvApellidoMat"
+        app:layout_constraintTop_toBottomOf="@+id/txvApellidoMat"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" /><![CDATA[
+
+
+    />
+
+
+]]>
+
+    <TextView
+        android:id="@+id/txvNumCelular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Telefono Celular:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/edtApellidos"
+        app:layout_constraintTop_toBottomOf="@+id/edtApellidos" />
+
+    <EditText
+        android:id="@+id/edtNumCelular"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        app:layout_constraintStart_toStartOf="@+id/txvNumCelular"
+        app:layout_constraintTop_toBottomOf="@+id/txvNumCelular"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txvNumEmergencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefono Emergencia:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/edtApellidoMat"
+        app:layout_constraintTop_toTopOf="@+id/txvNumCelular" />
+
+    <EditText
+        android:id="@+id/edtNumEmergencia"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/edtApellidoMat"
+        app:layout_constraintStart_toStartOf="@+id/txvNumEmergencia"
+        app:layout_constraintTop_toBottomOf="@+id/txvNumEmergencia"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+    <TextView
+        android:id="@+id/txvDireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Dirección:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/edtNumCelular"
+        app:layout_constraintTop_toBottomOf="@+id/edtNumCelular" />
+
+    <EditText
+        android:id="@+id/edtDireccion"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/edtNumEmergencia"
+        app:layout_constraintStart_toStartOf="@+id/txvDireccion"
+        app:layout_constraintTop_toBottomOf="@+id/txvDireccion"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txvDistrito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Distrito:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/edtDireccion"
+        app:layout_constraintTop_toBottomOf="@+id/edtDireccion" />
+
+    <Spinner
+        android:id="@+id/spnDistrito"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/distritosLima"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="@+id/edtDireccion"
+        app:layout_constraintStart_toStartOf="@+id/txvDistrito"
+        app:layout_constraintTop_toBottomOf="@+id/txvDistrito"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <ImageView
+        android:id="@+id/imgDoctor"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="63dp"
+        app:layout_constraintStart_toStartOf="@+id/txvCuentaAdmin2"
+        app:layout_constraintTop_toBottomOf="@+id/txvCuentaAdmin2"
+        app:srcCompat="@drawable/doctor_imagen" />
+
+    <LinearLayout
+        android:layout_width="155dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="5dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+        app:layout_constraintStart_toEndOf="@+id/imgDoctor"
+        app:layout_constraintTop_toTopOf="@+id/imgDoctor">
+
+        <TextView
+            android:id="@+id/txvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="Perfil del doctor:"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txvTitulo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dr(a). Sandra"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvTitulo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Perez"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvTitulo3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gonzales"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvTitulo5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CMP: 656555"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnActualizar2"
+        style="@android:style/Widget.DeviceDefault.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="#4A6CE7"
+        app:layout_constraintEnd_toEndOf="@+id/spnDistrito"
+        app:layout_constraintTop_toBottomOf="@+id/spnDistrito"
+        app:srcCompat="@drawable/siguiente_icono"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/txvCuentaAdmin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cuenta Medico"
+        android:textColor="#3980ea"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txvActualizarDatos"
+        app:layout_constraintTop_toBottomOf="@+id/txvActualizarDatos" />
+
+    <TextView
+        android:id="@+id/txvActualizar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar"
+        android:textColor="#e1dce0"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/btnActualizar2"
+        app:layout_constraintTop_toBottomOf="@+id/btnActualizar2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

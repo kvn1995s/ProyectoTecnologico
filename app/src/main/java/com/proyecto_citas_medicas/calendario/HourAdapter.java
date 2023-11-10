@@ -1,4 +1,4 @@
-package com.proyecto_citas_medicas;
+package com.proyecto_citas_medicas.calendario;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.proyecto_citas_medicas.R;
 
 import java.time.LocalTime;
 import java.util.ArrayList;

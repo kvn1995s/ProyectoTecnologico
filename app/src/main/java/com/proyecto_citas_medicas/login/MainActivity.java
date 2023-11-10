@@ -1,10 +1,11 @@
-package com.proyecto_citas_medicas;
+package com.proyecto_citas_medicas.login;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
@@ -27,11 +28,23 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.proyecto_citas_medicas.R;
+import com.proyecto_citas_medicas.administrador.administrador_activity;
+import com.proyecto_citas_medicas.api.MyApi;
 import com.proyecto_citas_medicas.databinding.ActivityMainBinding;
 import com.proyecto_citas_medicas.medicos.Medicos_Activity;
+import com.proyecto_citas_medicas.pacientes.HomePacienteActivity;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
+
+    EditText edtCorreo,edtContraseña;
 
     private GoogleSignInClient googleSignInClient;
     private FirebaseAuth firebaseAuth;
@@ -43,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        edtCorreo = findViewById(R.id.edtCorreo);
+        edtContraseña = findViewById(R.id.edtContrasena);
+
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -50,9 +66,10 @@ public class MainActivity extends AppCompatActivity {
         googleSignInClient = GoogleSignIn.getClient(this,googleSignInOptions);
 
         firebaseAuth = FirebaseAuth.getInstance();
-        checkUser();
 
-        binding.imgbuttongoogle.setOnClickListener(new View.OnClickListener() {
+
+
+        binding.btnIngresaGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -60,7 +77,56 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-    }
+
+        binding.btnIngresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String correo1=edtCorreo.getText().toString();
+                String contra1=edtContraseña.getText().toString();
+
+                Retrofit retrofit=new Retrofit.Builder()
+                        .baseUrl("http://192.168.0.5/appCitas/login.php/")
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .build();
+
+                MyApi myApi=retrofit.create(MyApi.class);
+                Call<User> call=myApi.login(correo1,contra1);
+
+                call.enqueue(new Callback<User>() {
+                    @Override
+                    public void onResponse(Call<User> call, Response<User> response) {
+                        if(response.isSuccessful())
+                        {
+                            User user= response.body();
+                            String userType2= user.getUserType();
+
+                            if (userType2 != null) {
+                                if (userType2.equals("PACIENTE")) {
+                                    startActivity(new Intent(MainActivity.this,  HomePacienteActivity.class));
+
+                                }else {
+                                    startActivity(new Intent(MainActivity.this, Medicos_Activity.class));
+
+                                }
+                            } else {
+                                // El tipo de usuario no se pudo determinar
+                                Toast.makeText(MainActivity.this, "Error: Tipo de usuario desconocido", Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            // La respuesta no fue exitosa
+                            Toast.makeText(MainActivity.this, "Error al iniciar sesión, por favor intente de nuevo", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<User> call, Throwable t) {
+
+                    }
+                });
+            }
+        });
+
+       }
     ActivityResultLauncher<Intent> resultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
         @Override
         public void onActivityResult(ActivityResult result) {
@@ -77,19 +143,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     });
-    private void checkUser() {
-        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-        if (firebaseUser != null){
-            String emailMed = firebaseUser.getEmail().toString();
-                if (emailMed.equals("kamc123456@gmail.com")){
-                    startActivity(new Intent(this,administrador_activity.class));
 
-                }else{
-                    startActivity(new Intent(this, Medicos_Activity.class));
-                }
-            finish();
-        }
-    }
     private void firebaseAuthWithGoogleAccount(GoogleSignInAccount account) {
         Log.d(TAG,"firebaseAuthGoogleAccount: begin firebase auth with google account");
         AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(),null);
@@ -133,4 +187,8 @@ public class MainActivity extends AppCompatActivity {
                 });
 
     }
+
+
+
+
 }

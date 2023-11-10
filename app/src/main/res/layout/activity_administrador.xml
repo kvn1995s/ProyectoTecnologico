@@ -4,6 +4,164 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".administrador_activity">
+    android:background="#E1DCE0"
+    tools:context=".administrador.administrador_activity">
+
+
+    <ImageView
+        android:id="@+id/imgFondoAzul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-300dp"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fondo1" />
+
+    <TextView
+        android:id="@+id/txvPanelControlAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="68dp"
+        android:text="Panel de Control"
+        android:textColor="#e1dce0"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imgFondoAzul"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgLogoPrincipal"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cmp_logo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/txvPanelControlAdmin"
+        app:layout_constraintTop_toBottomOf="@+id/txvDashboardPrincipal">
+
+
+        <ImageButton
+            android:id="@+id/btnDoctores"
+            android:layout_width="120dp"
+            android:layout_height="130dp"
+            android:background="#E1DCE0"
+            android:contentDescription="Lista Doctors"
+            app:srcCompat="@drawable/doctor_icono" />
+
+        <TextView
+            android:id="@+id/txvDoctores"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Doctores"
+            android:textAlignment="center"
+            android:textColor="#3980ea"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnCalendario"
+            android:layout_width="120dp"
+            android:layout_height="130dp"
+            android:background="#E1DCE0"
+            android:contentDescription="Calendario"
+            app:srcCompat="@drawable/calendario_icono" />
+
+        <TextView
+            android:id="@+id/txvCalendario"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Calendario"
+            android:textAlignment="center"
+            android:textColor="#3980ea"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogoPrincipal"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout">
+
+        <ImageButton
+            android:id="@+id/btnCitas"
+            android:layout_width="120dp"
+            android:layout_height="130dp"
+            android:background="#E1DCE0"
+            android:contentDescription="Lista Citas"
+            app:srcCompat="@drawable/citas_icono" />
+
+        <TextView
+            android:id="@+id/txvCitas"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Citas"
+            android:textAlignment="center"
+            android:textColor="#3980ea"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnSalir"
+            android:layout_width="120dp"
+            android:layout_height="130dp"
+            android:background="#E1DCE0"
+            android:contentDescription="Salir"
+            app:srcCompat="@drawable/salir_icono" />
+
+        <TextView
+            android:id="@+id/txvSalir"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Salir"
+            android:textAlignment="center"
+            android:textColor="#3980ea"
+            android:textSize="18sp"
+            android:textStyle="bold"
+
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txvDashboardPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:text="Dashboard Principal"
+        android:textColor="#3980ea"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvPanelControlAdmin" />
+
+    <TextView
+        android:id="@+id/txvAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="Administrador"
+        android:textColor="#e1dce0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txvPanelControlAdmin"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

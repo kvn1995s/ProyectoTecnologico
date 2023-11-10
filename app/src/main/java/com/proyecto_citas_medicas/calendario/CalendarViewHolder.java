@@ -1,10 +1,13 @@
-package com.proyecto_citas_medicas;
+package com.proyecto_citas_medicas.calendario;
 
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.proyecto_citas_medicas.R;
+import com.proyecto_citas_medicas.calendario.CalendarAdapter;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

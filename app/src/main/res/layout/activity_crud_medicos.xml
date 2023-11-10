@@ -1,192 +1,437 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C1E8FF"
-    tools:context=".crud_medicos">
+    android:background="#E1DCE0"
+    tools:context=".medicos.crud_medicos"
+    tools:ignore="ExtraText">
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="42dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="186dp"
-        android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/logg" />
-
-    <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/imgFondoAzul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="155dp"
-        android:layout_marginTop="70dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Consulturio Medico Familiar"
-        android:textColor="#219BCC"
-        android:textSize="8dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        tools:ignore="TextSizeCheck" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="175dp"
-        android:layout_marginTop="80dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Dr. Jan Hermoza"
-        android:textColor="#003549"
-        android:textSize="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        tools:ignore="TextSizeCheck" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginStart="100dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Registar Personal De Salud:"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/list_regis"
-        android:layout_width="282dp"
-        android:layout_height="449dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="125dp"
-        android:layout_marginEnd="64dp"
-        android:orientation="vertical">
-
-        <EditText
-            android:id="@+id/edtcorreo"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/platin_text_border"
-            android:ems="10"
-            android:fontFamily="sans-serif-medium"
-            android:hint="Correo Electronico"
-            android:inputType="text"
-            android:paddingLeft="10dp"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/edtcontra"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/platin_text_border"
-            android:ems="10"
-            android:fontFamily="sans-serif-medium"
-            android:hint="Contraseña"
-            android:inputType="text"
-            android:paddingLeft="10dp"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/edtnom"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/platin_text_border"
-            android:ems="10"
-            android:fontFamily="sans-serif-medium"
-            android:hint="Nombres"
-            android:inputType="text"
-            android:paddingLeft="10dp"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/edtapeP"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/platin_text_border"
-            android:ems="10"
-            android:fontFamily="sans-serif-medium"
-            android:hint="Apellido Paterno"
-            android:inputType="text"
-            android:paddingLeft="10dp"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/edtapeM"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/platin_text_border"
-            android:ems="10"
-            android:fontFamily="sans-serif-medium"
-            android:hint="Apellido Materno"
-            android:inputType="text"
-            android:paddingLeft="10dp"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/edtdni"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/platin_text_border"
-            android:ems="10"
-            android:fontFamily="sans-serif-medium"
-            android:hint="Doc. Identidad"
-            android:inputType="text"
-            android:paddingLeft="10dp"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/edtdirec"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/platin_text_border"
-            android:ems="10"
-            android:fontFamily="sans-serif-medium"
-            android:hint="Direccion"
-            android:inputType="text"
-            android:paddingLeft="10dp"
-            android:textSize="16sp" />
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/logutBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="600dp"
-        android:backgroundTint="@color/azul"
-        android:text="Disconect"
-        android:textSize="10sp"
-        />
-    <Button
-        android:id="@+id/btnRegis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="255dp"
-        android:layout_marginTop="600dp"
-        android:backgroundTint="@color/azul"
-        android:text="Registrar"
-        android:textSize="10sp"
-        />
-
-    <TextView
-        android:id="@+id/emailTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="580dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Email"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-</RelativeLayout>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fondo1" />
+
+    <TextView
+        android:id="@+id/txvTituloRegistro"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="40dp"
+        android:text="Registrar Personal de Salud"
+        android:textColor="#e1dce0"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imgFondoAzul"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toStartOf="@+id/imgFondoAzul"
+        app:layout_constraintTop_toTopOf="@+id/imgFondoAzul" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/imgFondoAzul"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="@+id/imgFondoAzul"
+        app:layout_constraintTop_toTopOf="@+id/imgFondoAzul"
+        app:srcCompat="@drawable/cmp_logo" />
+
+
+
+    <TextView
+        android:id="@+id/txvCuentaAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cuenta Administrador"
+        android:textColor="#e1dce0"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txvTituloRegistro"
+        app:layout_constraintTop_toBottomOf="@+id/txvTituloRegistro"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/txvCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Correo:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/txvTituloRegistro"
+        app:layout_constraintTop_toBottomOf="@+id/txvCuentaAdmin" />
+
+    <EditText
+        android:id="@+id/edtCorreo"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+        app:layout_constraintStart_toStartOf="@+id/txvCorreo"
+        app:layout_constraintTop_toBottomOf="@+id/txvCorreo"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txvContrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Contraseña:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/edtCorreo"
+        app:layout_constraintTop_toBottomOf="@+id/edtCorreo" />
+
+    <EditText
+        android:id="@+id/edtContrasena"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+        app:layout_constraintStart_toStartOf="@+id/txvContrasena"
+        app:layout_constraintTop_toBottomOf="@+id/txvContrasena"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txvCmp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Codigo CMP"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/txvTituloRegistro"
+        app:layout_constraintTop_toBottomOf="@+id/edtContrasena" />
+
+    <EditText
+        android:id="@+id/edtCmp"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        app:layout_constraintStart_toStartOf="@+id/txvCmp"
+        app:layout_constraintTop_toBottomOf="@+id/txvCmp"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+    <TextView
+        android:id="@+id/txvNumDoc"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Documento de Identidad:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+        app:layout_constraintTop_toTopOf="@+id/txvCmp" />
+
+    <EditText
+        android:id="@+id/edtNumDoc"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+        app:layout_constraintStart_toStartOf="@+id/txvNumDoc"
+        app:layout_constraintTop_toBottomOf="@+id/txvNumDoc"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txvNombres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Nombres:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/edtCmp"
+        app:layout_constraintTop_toBottomOf="@+id/edtCmp" />
+
+    <EditText
+        android:id="@+id/edtNombres"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+        app:layout_constraintStart_toStartOf="@+id/txvNombres"
+        app:layout_constraintTop_toBottomOf="@+id/txvNombres"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txvApellidoPat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Apellido Paterno:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/edtNombres"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombres" />
+
+    <EditText
+        android:id="@+id/edtApellidos"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        app:layout_constraintStart_toStartOf="@+id/txvApellidoPat"
+        app:layout_constraintTop_toBottomOf="@+id/txvApellidoPat"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txvApellidoMat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apellido Materno"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/txvNumDoc"
+        app:layout_constraintTop_toTopOf="@+id/txvApellidoPat"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/edtApellidoMat"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+        app:layout_constraintStart_toStartOf="@+id/txvApellidoMat"
+        app:layout_constraintTop_toBottomOf="@+id/txvApellidoMat"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txvSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Sexo:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/edtApellidos"
+        app:layout_constraintTop_toBottomOf="@+id/edtApellidos" />
+
+    <Spinner
+        android:id="@+id/spnSexo"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/Genero"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="@+id/txvSexo"
+        app:layout_constraintTop_toBottomOf="@+id/txvSexo"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txvEstadoCivil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado Civil:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/edtApellidoMat"
+        app:layout_constraintTop_toTopOf="@+id/txvSexo" />
+
+
+    <Spinner
+        android:id="@+id/spnEstadoCivil"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/EstadoCivil"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+        app:layout_constraintStart_toStartOf="@+id/txvEstadoCivil"
+        app:layout_constraintTop_toBottomOf="@+id/txvEstadoCivil"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txvNumCelular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Telefono Celular:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/spnSexo"
+        app:layout_constraintTop_toBottomOf="@+id/spnSexo" />
+    />
+
+
+    <EditText
+        android:id="@+id/edtNumCelular"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        app:layout_constraintStart_toStartOf="@+id/txvNumCelular"
+        app:layout_constraintTop_toBottomOf="@+id/txvNumCelular"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txvNumEmergencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefono Emergencia:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/spnEstadoCivil"
+        app:layout_constraintTop_toTopOf="@+id/txvNumCelular" />
+
+    <EditText
+        android:id="@+id/edtNumEmergencia"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+        app:layout_constraintStart_toStartOf="@+id/txvNumEmergencia"
+        app:layout_constraintTop_toBottomOf="@+id/txvNumEmergencia"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txvFechaNac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Fecha de Nacimiento:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/edtNumCelular"
+        app:layout_constraintTop_toBottomOf="@+id/edtNumCelular" />
+
+    <EditText
+        android:id="@+id/edtFechaNac"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@+id/txvFechaNac"
+        app:layout_constraintTop_toBottomOf="@+id/txvFechaNac"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txvEspecialidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Especialidad:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/edtNumEmergencia"
+        app:layout_constraintTop_toTopOf="@+id/txvFechaNac" />
+
+
+    <EditText
+        android:id="@+id/edtEspecialidad"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+        app:layout_constraintStart_toStartOf="@+id/txvEspecialidad"
+        app:layout_constraintTop_toBottomOf="@+id/txvEspecialidad"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txvDireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Dirección:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/edtFechaNac"
+        app:layout_constraintTop_toBottomOf="@+id/edtFechaNac" />
+
+    <EditText
+        android:id="@+id/edtDireccion"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+        app:layout_constraintStart_toStartOf="@+id/txvDireccion"
+        app:layout_constraintTop_toBottomOf="@+id/txvDireccion"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txvDistrito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Distrito:"
+        android:textColor="#e1dce0"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/edtDireccion"
+        app:layout_constraintTop_toBottomOf="@+id/edtDireccion" />
+
+    <Spinner
+        android:id="@+id/spnDistrito"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="#E1DCE0"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/distritosLima"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+        app:layout_constraintStart_toStartOf="@+id/txvDistrito"
+        app:layout_constraintTop_toBottomOf="@+id/txvDistrito"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/btnActualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="#3A72E2"
+        app:layout_constraintEnd_toEndOf="@+id/spnDistrito"
+        app:layout_constraintTop_toBottomOf="@+id/spnDistrito"
+        app:srcCompat="@drawable/siguiente_icono"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <TextView
+        android:id="@+id/txvRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        android:textColor="#e1dce0"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/btnActualizar"
+        app:layout_constraintTop_toBottomOf="@+id/btnActualizar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

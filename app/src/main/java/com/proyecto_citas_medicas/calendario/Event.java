@@ -1,4 +1,4 @@
-package com.proyecto_citas_medicas;
+package com.proyecto_citas_medicas.calendario;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

@@ -1,9 +1,9 @@
-package com.proyecto_citas_medicas;
+package com.proyecto_citas_medicas.medicos;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -17,7 +17,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.proyecto_citas_medicas.R;
 import com.proyecto_citas_medicas.databinding.ActivityCrudMedicosBinding;
 
 import java.util.HashMap;
@@ -32,7 +32,8 @@ public class crud_medicos extends AppCompatActivity {
 
     RequestQueue requestQueue;
 
-    EditText edtcorreo,edtcontra,edtnoms,edtapeP,edtapeM,edtdni,edtdirect,edtcmp;
+    EditText edtcorreo,edtcontra,edtnoms,edtapeP,edtapeM,edtdni,edtcmp;
+    private Spinner spDireccion;
 
 
     @Override
@@ -40,20 +41,14 @@ public class crud_medicos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityCrudMedicosBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
         firebaseAuth= FirebaseAuth.getInstance();
-        checkUser();
 
         requestQueue = Volley.newRequestQueue(this);
         initUi();
 
-        binding.logutBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                finish();
-            }
-        });
-        binding.btnRegis.setOnClickListener(new View.OnClickListener() {
+        binding.btnActualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -63,7 +58,7 @@ public class crud_medicos extends AppCompatActivity {
                     String apellidoPaternoM = edtapeP.getText().toString().trim();
                     String apellidoMaternoM	 = edtapeM.getText().toString().trim();
                     String dniMe = edtdni.getText().toString().trim();
-                    String direccionMe = edtdirect.getText().toString().trim();
+                    String direccionMe = spDireccion.getSelectedItem().toString().trim();
                     String cmpMedico = edtcmp.getText().toString().trim();
 
                     createMedic(correoMed,contraseñaMed,nomMed,apellidoPaternoM,apellidoMaternoM,dniMe,direccionMe,cmpMedico);
@@ -111,27 +106,15 @@ public class crud_medicos extends AppCompatActivity {
     }
 
     private void initUi() {
-        edtcorreo = findViewById(R.id.edtcorreo);
-        edtcontra = findViewById(R.id.edtcontra);
-        edtnoms = findViewById(R.id.edtnom);
-        edtapeP = findViewById(R.id.edtapeP);
-        edtapeM = findViewById(R.id.edtapeM);
-        edtdni = findViewById(R.id.edtdni);
-        edtdirect = findViewById(R.id.edtdirec);
+        edtcorreo = findViewById(R.id.edtCorreo);
+        edtcontra = findViewById(R.id.edtContrasena);
+        edtnoms = findViewById(R.id.edtNombres);
+        edtapeP = findViewById(R.id.edtApellidos);
+        edtapeM = findViewById(R.id.edtApellidoMat);
+        edtdni = findViewById(R.id.edtNumDoc);
+        spDireccion = (Spinner) findViewById(R.id.spnDistrito);
         edtcmp=findViewById(R.id.edtCmp);
     }
 
-    private void checkUser() {
-        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-        if (firebaseUser != null){
-            String email = firebaseUser.getEmail();
-            binding.emailTv.setText(email);
 
-        }
-        else {
-               startActivity(new Intent(this, MainActivity.class));
-            finish();
-
-        }
-    }
 }

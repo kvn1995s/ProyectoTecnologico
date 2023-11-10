@@ -1,7 +1,7 @@
-package com.proyecto_citas_medicas;
+package com.proyecto_citas_medicas.calendario;
 
-import static com.proyecto_citas_medicas.CalendarUtils.daysInMonthArray;
-import static com.proyecto_citas_medicas.CalendarUtils.monthYearFromDate;
+import static com.proyecto_citas_medicas.calendario.CalendarUtils.daysInMonthArray;
+import static com.proyecto_citas_medicas.calendario.CalendarUtils.monthYearFromDate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.proyecto_citas_medicas.R;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

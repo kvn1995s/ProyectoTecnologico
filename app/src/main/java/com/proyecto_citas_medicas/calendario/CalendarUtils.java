@@ -1,4 +1,4 @@
-package com.proyecto_citas_medicas;
+package com.proyecto_citas_medicas.calendario;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

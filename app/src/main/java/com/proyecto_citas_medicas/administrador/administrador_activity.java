@@ -1,4 +1,4 @@
-package com.proyecto_citas_medicas;
+package com.proyecto_citas_medicas.administrador;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.proyecto_citas_medicas.calendario.Horario_calendar;
 import com.proyecto_citas_medicas.databinding.ActivityAdministradorBinding;
+import com.proyecto_citas_medicas.login.MainActivity;
 import com.proyecto_citas_medicas.medicos.medicos_list;
 
 public class administrador_activity extends AppCompatActivity {
@@ -24,14 +25,14 @@ public class administrador_activity extends AppCompatActivity {
         firebaseAuth= FirebaseAuth.getInstance();
         checkUser();
 
-        binding.imgHora.setOnClickListener(new View.OnClickListener() {
+        binding.btnCalendario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(administrador_activity.this, Horario_calendar.class));
             }
          });
 
-        binding.imgbuttonLogout.setOnClickListener(new View.OnClickListener() {
+        binding.btnSalir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 firebaseAuth.signOut();
@@ -40,7 +41,7 @@ public class administrador_activity extends AppCompatActivity {
             }
         });
 
-        binding.imgbuttondocs.setOnClickListener(new View.OnClickListener() {
+        binding.btnDoctores.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(administrador_activity.this, medicos_list.class));

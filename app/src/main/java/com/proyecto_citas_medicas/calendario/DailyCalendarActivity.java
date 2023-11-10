@@ -1,6 +1,6 @@
-package com.proyecto_citas_medicas;
+package com.proyecto_citas_medicas.calendario;
 
-import static com.proyecto_citas_medicas.CalendarUtils.selectedDate;
+import static com.proyecto_citas_medicas.calendario.CalendarUtils.selectedDate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.proyecto_citas_medicas.R;
 
 import java.time.LocalTime;
 import java.time.format.TextStyle;

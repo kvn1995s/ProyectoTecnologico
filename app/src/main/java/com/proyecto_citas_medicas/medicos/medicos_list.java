@@ -1,7 +1,8 @@
-package com.proyecto_citas_medicas;
+package com.proyecto_citas_medicas.medicos;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -9,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.proyecto_citas_medicas.R;
+import com.proyecto_citas_medicas.api.MyApi;
 import com.proyecto_citas_medicas.databinding.ActivityMedicosListBinding;
 
 import java.util.ArrayList;
@@ -39,9 +42,32 @@ public class medicos_list extends AppCompatActivity {
         binding.btnRegis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(medicos_list.this,crud_medicos.class));
+                startActivity(new Intent(medicos_list.this, crud_medicos.class));
             }
         });
+        Adapter_medicos adapter = new Adapter_medicos(listMedicosArrayList, this);
+
+        adapter.setOnItemClickListener(new Adapter_medicos.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                // Lógica a realizar cuando se hace clic en un elemento
+                Log.d("Clic", "Clic en posición " + position);
+                // Puedes obtener los datos del elemento haciendo listMedicosArrayList.get(position)
+
+                // Por ejemplo:
+                ListMedicos selectedMedico = listMedicosArrayList.get(position);
+                String medicoNombre = selectedMedico.getNombre();
+                Intent intent = new Intent(medicos_list.this, DetalleMedicoActivity.class);
+
+                // Puedes pasar datos a la actividad usando el Intent
+                intent.putExtra("nombreMedico", medicoNombre);
+                // Agrega más datos según sea necesario
+
+                // Inicia la actividad
+                startActivity(intent);
+            }
+        });
+        recyclerView.setAdapter(adapter);
 
     }
 
@@ -72,6 +98,8 @@ public class medicos_list extends AppCompatActivity {
                     adapter_medicos=new Adapter_medicos ( listMedicosArrayList,medicos_list.this);
                     recyclerView.setAdapter ( adapter_medicos );
                 }
+                // Actualiza el adaptador con los nuevos datos
+                adapter_medicos.notifyDataSetChanged();
             }
             @Override
             public void onFailure(Call<ArrayList<ListMedicos>> call, Throwable t) {

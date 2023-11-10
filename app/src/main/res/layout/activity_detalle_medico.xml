@@ -4,6 +4,371 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E1DCE0"
     tools:context=".medicos.DetalleMedicoActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fondo4" />
+
+    <TextView
+        android:id="@+id/txvNombreDoctor1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Detalle Doctor"
+        android:textAlignment="center"
+        android:textColor="#3980EA"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgLogoCmp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txvNombreDoctor1"
+        app:srcCompat="@drawable/cmp_logo" />
+
+    <ImageView
+        android:id="@+id/imgDoctor1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvNombreDoctor1"
+        app:srcCompat="@drawable/doctor_imagen" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgDoctor1">
+
+        <Button
+            android:id="@+id/btnRegistrar"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:drawableLeft="@drawable/telefono"
+            android:paddingLeft="5dp"
+            android:paddingRight="0dp"
+            android:text="Llamar"
+            android:textColor="#E1DCE0"
+            android:textSize="11sp"
+            app:backgroundTint="#6ABAE8"
+            app:cornerRadius="0dp" />
+
+        <Button
+            android:id="@+id/button12"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:drawableLeft="@drawable/videollamada"
+            android:paddingLeft="5dp"
+            android:paddingRight="0dp"
+            android:text="Videollamada"
+            android:textColor="#E1DCE0"
+            android:textSize="11sp"
+            app:backgroundTint="#8A6BED"
+            app:cornerRadius="0dp" />
+
+        <Button
+            android:id="@+id/button13"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:drawableLeft="@drawable/mensaje"
+            android:paddingLeft="5dp"
+            android:paddingRight="0dp"
+            android:text="Mensaje"
+            android:textColor="#E1DCE0"
+            android:textSize="11sp"
+            app:backgroundTint="#E8A570"
+            app:cornerRadius="0dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="40dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+
+        <TextView
+            android:id="@+id/txvNombreDoctor3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sandra"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvApePat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Perez"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvApeMat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gonzales"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvEspecialidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cardiologia"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvCodigoCMP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="656555"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvDNI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="7894562"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sandra2024@gmail.com"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvSexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Femenino"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Av. La Molina 53"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvDistrito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="La Molina"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="963485125"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout3">
+
+
+        <TextView
+            android:id="@+id/txvTitulo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Primer Nombre:"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvTitulo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apellido Paterno:"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvTitulo3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apellido Materno:"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvTitulo4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Especialidad:"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvTitulo5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Codigo:"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvTitulo6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DNI:"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvTitulo7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correo:"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvTitulo8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sexo:"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvTitulo9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Direccion:"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvTitulo10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Distrito:"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvTitulo11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Telefono:"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="Informacion Doctor"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <Button
+        android:id="@+id/btnPersonalizar"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Personalizar"
+        android:textColor="#3980EA"
+        android:textSize="15sp"
+        app:backgroundTint="#e1dce0"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:strokeColor="#3980EA"
+        app:strokeWidth="2dp" />
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

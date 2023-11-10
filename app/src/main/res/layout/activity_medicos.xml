@@ -1,51 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C1E8FF"
-    tools:context=".Medicos_Activity">
+    android:background="#E1DCE0"
+    tools:context=".medicos.Medicos_Activity">
+
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="117dp"
-        android:layout_height="129dp"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="166dp"
-        android:layout_marginEnd="138dp"
-        app:srcCompat="@drawable/logg" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="295dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Consultorio Medico Familiar"
-        android:textColor="#219BCC"        />
-
-    <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/imgFondoAzul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
-        android:layout_marginStart="150dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Dr. Jan Hermoza"
-        android:textColor="#003549"         />
+        android:layout_marginTop="-200dp"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fondo8" />
 
-    <TextView
-        android:id="@+id/textView3"
+    <ImageView
+        android:id="@+id/imgFotoDoctor"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toStartOf="@+id/txvPanelControl"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/doctor_imagen" />
+
+    <LinearLayout
+        android:id="@+id/lytInfoDoctor"
+        android:layout_width="155dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="5dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/imgMarca"
+        app:layout_constraintStart_toEndOf="@+id/imgFotoDoctor"
+        app:layout_constraintTop_toTopOf="@+id/imgFotoDoctor">
+
+        <TextView
+            android:id="@+id/txvTitulo0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="Bienvenido(a)"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txvTitulo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dr(a). Sandra"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvTitulo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Perez"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvTitulo3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gonzales"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txvTitulo5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CMP: 656555"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+
+            tools:ignore="DuplicateIds,TextSizeCheck" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="118dp"
-        android:layout_marginTop="400dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="Bienvenido Doctor"
-        android:textColor="#003549"
-        android:textSize="24sp" />
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/txvPanelControl"
+        app:layout_constraintTop_toBottomOf="@+id/txvDashboardMenU">
+
+        <ImageView
+            android:id="@+id/btnActualizar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/editar_icono" />
+
+        <TextView
+            android:id="@+id/txvActualizar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Actualizar"
+            android:textAlignment="center"
+            android:textColor="#3980ea"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnCitas"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/citas_icono" />
+
+        <TextView
+            android:id="@+id/txvCitas"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Citas"
+            android:textAlignment="center"
+            android:textColor="#3980ea"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/imgMarca"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/btnCalendario"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/calendario_icono" />
+
+        <TextView
+            android:id="@+id/txvCalendario"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Calendario"
+            android:textAlignment="center"
+            android:textColor="#3980ea"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnSalir"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/salir_icono" />
+
+        <TextView
+            android:id="@+id/txvSalir"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Salir"
+            android:textAlignment="center"
+            android:textColor="#3980ea"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txvPanelControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="52dp"
+        android:text="Panel de Control"
+        android:textColor="#e1dce0"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvDashboardMenU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp"
+        android:text="Dashboard Menu"
+        android:textColor="#3980ea"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvPanelControl" />
+
+    <ImageView
+        android:id="@+id/imgMarca"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cmp_logo" />
+
+    <TextView
+        android:id="@+id/txvDoctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doctor"
+        android:textColor="#e1dce0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txvPanelControl"
+        app:layout_constraintTop_toBottomOf="@+id/txvPanelControl" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
